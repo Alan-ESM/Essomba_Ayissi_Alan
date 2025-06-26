@@ -3,14 +3,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Keyce Informatique - Présentation</title>
+    <title>Keyce Informatique</title>
     <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 </head>
 <body>
     <header>
         <h1>Keyce Informatique</h1>
         <p>Nous faisons de vous des leaders dans les métiers du futur !</p>
-        <img src="keyce.jpg" alt="Logo Keyce">
+        <img src="logo.jpg" alt="Logo Keyce Informatique">
     </header>
 
     <nav>
@@ -29,12 +30,31 @@
     <section id="services">
         <h2>Nos Services</h2>
         <div class="service-container">
-            <div class="service">Intelligence Artificielle</div>
-            <div class="service">Cybersécurité</div>
-            <div class="service">Administration des systèmes d'information</div>
-            <div class="service">Big Data</div>
-            <div class="service">Blockchain</div>
-            <div class="service">Réseau Informatique et Business Management</div>
+            <div class="service">
+                <h3>Intelligence Artificielle</h3>
+            </div>
+            <div class="service">
+                <h3>Cybersécurité</h3>
+            </div>
+            <div class="service">
+                <h3>Administration des systèmes d'information</h3>
+            </div>
+            <div class="service">
+                <h3>Big Data</h3>
+            </div>
+            <div class="service">
+                <h3>Blockchain</h3>
+            </div>
+            <div class="service">
+                <h3>Réseau Informatique et Business Management</h3>
+            </div>
+        </div>
+    </section>
+
+    <section id="chart-section">
+        <h2>Statistiques d'Inscription</h2>
+        <div class="chart-container">
+            <canvas id="enrollmentChart"></canvas>
         </div>
     </section>
 
@@ -42,14 +62,11 @@
         <h2>Contactez-nous</h2>
         <form id="contactForm">
             <label for="name">Nom :</label>
-            <input type="text" id="name" name="name" required>
-
+            <input type="text" id="name" required>
             <label for="email">Email :</label>
-            <input type="email" id="email" name="email" required>
-
+            <input type="email" id="email" required>
             <label for="message">Message :</label>
-            <textarea id="message" name="message" required></textarea>
-
+            <textarea id="message" required></textarea>
             <button type="submit">Envoyer</button>
         </form>
     </section>

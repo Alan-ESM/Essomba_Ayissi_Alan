@@ -18,10 +18,31 @@ window.addEventListener('scroll', function() {
     });
 });
 
-// Add subtle animation to header on load
 window.addEventListener('load', function() {
     const header = document.querySelector('header');
     header.style.transition = 'all 0.5s ease';
     header.style.transform = 'scale(1.02)';
     setTimeout(() => header.style.transform = 'scale(1)', 500);
 });
+
+// Image Carousel
+const images = [
+    'image1.jpg',
+    'image2.jpg',
+    'image3.jpg'
+];
+let currentIndex = 0;
+const header = document.querySelector('header');
+const imgElement = document.createElement('img');
+imgElement.className = 'carousel-img';
+imgElement.style.width = '200px';
+imgElement.style.borderRadius = '10px';
+imgElement.style.marginTop = '10px';
+header.appendChild(imgElement);
+
+function updateCarousel() {
+    imgElement.src = images[currentIndex];
+    currentIndex = (currentIndex + 1) % images.length;
+}
+
+setInterval(updateCarousel, 3000);

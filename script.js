@@ -27,9 +27,9 @@ window.addEventListener('load', function() {
 
 // Image Carousel
 const images = [
-    'image1.jpg',
-    'image2.jpg',
-    'image3.jpg'
+    'image1.webp',
+    'image2.webp',
+    'image3.webp'
 ];
 let currentIndex = 0;
 const header = document.querySelector('header');
